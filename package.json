@@ -1,15 +1,16 @@
 {
   "name": "taggit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a tag on remote git with version number in package.json (or bower.json)",
   "main": "taggit.js",
   "bin": {
-    "versionup": "bin/taggit"
+    "taggit": "bin/taggit"
   },
   "scripts": {
     "test": "nodeunit taggit.js",
     "cover": "istanbul cover nodeunit taggit_test.js --dir coverage",
-    "report": "codeclimate-test-reporter < coverage/lcov.info"
+    "report": "codeclimate-test-reporter < coverage/lcov.info",
+    "versionup": "versionup"
   },
   "repository": {
     "type": "git",
