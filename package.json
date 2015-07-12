@@ -1,6 +1,6 @@
 {
   "name": "taggit",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Create a tag on remote git with version number in package.json (or bower.json)",
   "main": "taggit.js",
   "bin": {
