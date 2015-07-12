@@ -12,7 +12,7 @@ Node.js module to create a tag on remote git with version number in package.json
 Usage
 ---------
 
-Call `taggit()` at project root path where `package.json` presents.
+Call `taggit()` at project root path where `package.json` exists.
 
 ```javascript
 
