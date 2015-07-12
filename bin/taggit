@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+/**
+ * CLI script for taggit.js
+ */
+
+"use strict";
+
+var program = require('commander'),
+    pkg = require('../package'),
+    taggit = require('../taggit.js');
+
+program
+    .version(pkg['version'])
+    .option('-t, --tagName <tagName>', "Tag of name. By default, name is resolved form package.json.")
+    .parse(process.argv);
+
+taggit(program, function (err) {
+    if (err) {
+        console.error(err);
+    }
+});
