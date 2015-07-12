@@ -8,7 +8,8 @@
 var taggit = require('./taggit'),
     childProcess = require('child_process');
 
-var spawn = childProcess.spawn;
+var spawn = childProcess.spawn,
+    exec = childProcess.exec;
 
 exports.setUp = function (done) {
     childProcess.spawn = function mockSpawn() {
@@ -29,11 +30,15 @@ exports.setUp = function (done) {
             }
         }
     };
+    childProcess.exec = function mockExec(comand, callback) {
+        callback(null, null);
+    };
     done();
 };
 
 exports.tearDown = function (done) {
     childProcess.spawn = spawn;
+    childProcess.exec = exec;
     done();
 };
 
