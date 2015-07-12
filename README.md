@@ -17,7 +17,13 @@ Just path your project root path to version up package.json (or bower.json).
 ```javascript
 
 var taggit = require('taggit');
-taggit({});
+
+// Create remote git tag named with package.json version. (eg. v1.0.0)
+taggit({
+    // Options
+}, function (err) {
+    
+});
 
 ```
 
