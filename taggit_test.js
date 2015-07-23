@@ -6,13 +6,11 @@
 "use strict";
 
 var taggit = require('./taggit'),
+    injectmock = require('injectmock'),
     childProcess = require('child_process');
 
-var spawn = childProcess.spawn,
-    exec = childProcess.exec;
-
 exports.setUp = function (done) {
-    childProcess.spawn = function mockSpawn() {
+    injectmock(childProcess, 'spawn', function mockSpawn() {
         return {
             stdout: {
                 pipe: function () {
@@ -29,16 +27,15 @@ exports.setUp = function (done) {
                 }, 2);
             }
         }
-    };
-    childProcess.exec = function mockExec(comand, callback) {
+    });
+    injectmock(childProcess, 'exec', function mockExec(comand, callback) {
         callback(null, null);
-    };
+    });
     done();
 };
 
 exports.tearDown = function (done) {
-    childProcess.spawn = spawn;
-    childProcess.exec = exec;
+    injectmock.restoreAll();
     done();
 };
 
