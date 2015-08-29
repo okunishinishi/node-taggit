@@ -33,9 +33,13 @@ Create a tag on remote git with version number in package.json (or bower.json)
 
 
 
+
 <!-- Sections Start -->
 <a name="sections"></a>
 
+<!-- Section from "docs/readme/01.Installation.md.hbs" Start -->
+
+<a name="section-docs-readme-01-installation-md"></a>
 Installation
 -----
 
@@ -43,6 +47,11 @@ Installation
 npm install taggit --save-dev
 ```
 
+<!-- Section from "docs/readme/01.Installation.md.hbs" End -->
+
+<!-- Section from "docs/readme/02.Usage.md.hbs" Start -->
+
+<a name="section-docs-readme-02-usage-md"></a>
 Usage
 ---------
 
@@ -60,6 +69,11 @@ taggit({
 
 ```
 
+<!-- Section from "docs/readme/02.Usage.md.hbs" End -->
+
+<!-- Section from "docs/readme/03.Options.md.hbs" Start -->
+
+<a name="section-docs-readme-03-options-md"></a>
 Options
 ---------
 
@@ -67,6 +81,11 @@ Options
 | --- | --- | --- |
 | tagName | ('v'+pkg.version) | Name of tag on git. By default, name is resolved form package.json. |
 
+<!-- Section from "docs/readme/03.Options.md.hbs" End -->
+
+<!-- Section from "docs/readme/04.CLI.md.hbs" Start -->
+
+<a name="section-docs-readme-04-c-l-i-md"></a>
 Using with CLI
 ---------
 
@@ -81,6 +100,8 @@ Then,
 ```bash
 $ taggit -t "v0.0.5"
 ```
+<!-- Section from "docs/readme/04.CLI.md.hbs" End -->
+
 
 <!-- Sections Start -->
 
