@@ -20,6 +20,7 @@ taggit
 [bd_gemnasium_shield_url]: https://gemnasium.com/okunishinishi/node-taggit.svg
 [bd_npm_url]: http://www.npmjs.org/package/taggit
 [bd_npm_shield_url]: http://img.shields.io/npm/v/taggit.svg?style=flat
+[bd_bower_badge_url]: https://img.shields.io/bower/v/taggit.svg?style=flat
 
 <!-- Badge End -->
 
@@ -37,9 +38,9 @@ Create a tag on remote git with version number in package.json (or bower.json)
 <!-- Sections Start -->
 <a name="sections"></a>
 
-<!-- Section from "docs/readme/01.Installation.md.hbs" Start -->
+<!-- Section from "doc/readme/01.Installation.md.hbs" Start -->
 
-<a name="section-docs-readme-01-installation-md"></a>
+<a name="section-doc-readme-01-installation-md"></a>
 Installation
 -----
 
@@ -47,11 +48,11 @@ Installation
 npm install taggit --save-dev
 ```
 
-<!-- Section from "docs/readme/01.Installation.md.hbs" End -->
+<!-- Section from "doc/readme/01.Installation.md.hbs" End -->
 
-<!-- Section from "docs/readme/02.Usage.md.hbs" Start -->
+<!-- Section from "doc/readme/02.Usage.md.hbs" Start -->
 
-<a name="section-docs-readme-02-usage-md"></a>
+<a name="section-doc-readme-02-usage-md"></a>
 Usage
 ---------
 
@@ -64,16 +65,16 @@ var taggit = require('taggit');
 taggit({
     // Options
 }, function (err) {
-
+    /*...*/
 });
 
 ```
 
-<!-- Section from "docs/readme/02.Usage.md.hbs" End -->
+<!-- Section from "doc/readme/02.Usage.md.hbs" End -->
 
-<!-- Section from "docs/readme/03.Options.md.hbs" Start -->
+<!-- Section from "doc/readme/03.Options.md.hbs" Start -->
 
-<a name="section-docs-readme-03-options-md"></a>
+<a name="section-doc-readme-03-options-md"></a>
 Options
 ---------
 
@@ -81,11 +82,11 @@ Options
 | --- | --- | --- |
 | tagName | ('v'+pkg.version) | Name of tag on git. By default, name is resolved form package.json. |
 
-<!-- Section from "docs/readme/03.Options.md.hbs" End -->
+<!-- Section from "doc/readme/03.Options.md.hbs" End -->
 
-<!-- Section from "docs/readme/04.CLI.md.hbs" Start -->
+<!-- Section from "doc/readme/04.CLI.md.hbs" Start -->
 
-<a name="section-docs-readme-04-c-l-i-md"></a>
+<a name="section-doc-readme-04-c-l-i-md"></a>
 Using with CLI
 ---------
 
@@ -100,7 +101,7 @@ Then,
 ```bash
 $ taggit -t "v0.0.5"
 ```
-<!-- Section from "docs/readme/04.CLI.md.hbs" End -->
+<!-- Section from "doc/readme/04.CLI.md.hbs" End -->
 
 
 <!-- Sections Start -->

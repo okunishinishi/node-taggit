@@ -4,5 +4,5 @@ var taggit = require('taggit');
 taggit({
     // Options
 }, function (err) {
-
+    /*...*/
 });

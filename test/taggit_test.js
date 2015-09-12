@@ -5,7 +5,7 @@
 
 "use strict";
 
-var taggit = require('./taggit'),
+var taggit = require('../lib/taggit'),
     injectmock = require('injectmock'),
     childProcess = require('child_process');
 
