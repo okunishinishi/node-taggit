@@ -9,7 +9,7 @@ var apeTmpl = require('ape-tmpl'),
 
 module.exports = apeTmpl.readmeMdBud({
     pkg: pkg,
-    repo: 'okunishinishi/node-' + pkg.name,
+    repo: pkg['repository'],
     sections: 'doc/readme/*.md.hbs',
     badges: {
         travis: true,
@@ -18,7 +18,10 @@ module.exports = apeTmpl.readmeMdBud({
         gemnasium: false,
         npm: true
     },
-    links: null
+    links: null,
+    vars: {
+        "signature": require('./signature.json')
+    }
 });
 
 if (!module.parent) {

@@ -1,0 +1,16 @@
+/**
+ * Bud file for bin.
+ */
+
+"use strict";
+
+var apeTmpl = require('ape-tmpl');
+
+module.exports = apeTmpl.binBud({
+    signature: require('../signature'),
+    path: 'taggit'
+});
+
+if (!module.parent) {
+    require('coz').render(__filename);
+}

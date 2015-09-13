@@ -15,6 +15,7 @@ apeTasking.runTasks('build', [
     function renderBud(callback) {
         coz.render([
             '.*.bud',
+            'bin/.*.bud',
             'lib/.*.bud',
             'test/.*.bud'
         ], callback);

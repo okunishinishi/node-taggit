@@ -1,0 +1,15 @@
+{
+  "name": "taggit",
+  "main": true,
+  "args": [
+  ],
+  "options": [
+    {
+      "name": "tag",
+      "short": "t",
+      "optional": false,
+      "type": "string",
+      "desc": "Name of tag. By default, name is resolved form package.json."
+    }
+  ]
+}

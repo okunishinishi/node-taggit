@@ -83,7 +83,7 @@ Options
 
 | Key | Default | Description |
 | --- | --- | --- |
-| tagName | ('v'+pkg.version) | Name of tag on git. By default, name is resolved form package.json. |
+| tag |  | Name of tag. By default, name is resolved form package.json. |
 
 <!-- Section from "doc/readme/03.Options.md.hbs" End -->
 
