@@ -10,6 +10,13 @@
       "optional": false,
       "type": "string",
       "desc": "Name of tag. By default, name is resolved form package.json."
+    },
+    {
+      "name": "cwd",
+      "short": "c",
+      "optional": false,
+      "type": "string",
+      "desc":"Working directory path."
     }
   ]
 }

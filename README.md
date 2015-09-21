@@ -84,6 +84,7 @@ Options
 | Key | Default | Description |
 | --- | --- | --- |
 | tag |  | Name of tag. By default, name is resolved form package.json. |
+| cwd |  | Working directory path. |
 
 <!-- Section from "doc/readme/03.Options.md.hbs" End -->
 
