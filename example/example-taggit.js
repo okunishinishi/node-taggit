@@ -1,11 +1,13 @@
-var basedir = __dirname;
+"use strict";
+
+let basedir = __dirname;
 process.chdir(basedir); //Move to project root.
 
-var taggit = require('taggit');
+const taggit = require('taggit');
 
 // Create remote git tag named with package.json version. (eg. v1.0.0)
 taggit({
     // Options
-}, function (err) {
+}, (err) => {
     /*...*/
 });

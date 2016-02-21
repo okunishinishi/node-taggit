@@ -6,10 +6,10 @@
 
 "use strict";
 
-var taggit = require('./taggit.js'),
+const taggit = require('./taggit.js'),
     pkg = require('../package.json');
 
-var lib = taggit.bind(taggit);
+let lib = taggit.bind(taggit);
 lib.taggit = taggit;
 lib.version = pkg.version;
 module.exports = lib;
