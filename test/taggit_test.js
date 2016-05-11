@@ -1,48 +1,48 @@
 /**
  * Test for taggit.
- * Runs with nodeunit
+ * Runs with mocha
  */
 
-"use strict";
+'use strict'
 
-var taggit = require('../lib/taggit'),
-    injectmock = require('injectmock'),
-    childProcess = require('child_process');
+const taggit = require('../lib/taggit')
+const injectmock = require('injectmock')
+const co = require('co')
+const assert = require('assert')
+const childProcess = require('child_process')
 
-exports.setUp = function (done) {
-    injectmock(childProcess, 'spawn', function mockSpawn() {
-        return {
-            stdout: {
-                pipe: function () {
-                }
-            },
-            stderr: {
-                pipe: function () {
+describe('taggit', function () {
+  before(() => co(function * () {
+    injectmock(childProcess, 'spawn', function mockSpawn () {
+      return {
+        stdout: {
+          pipe () {
+          }
+        },
+        stderr: {
+          pipe () {
 
-                }
-            },
-            on: function (event, callback) {
-                setTimeout(function () {
-                    callback(0);
-                }, 2);
-            }
+          }
+        },
+        on (event, callback) {
+          setTimeout(function () {
+            callback(0)
+          }, 2)
         }
-    });
-    injectmock(childProcess, 'exec', function mockExec(comand, callback) {
-        callback(null, null);
-    });
-    done();
-};
+      }
+    })
+    injectmock(childProcess, 'exec', function mockExec (comand, callback) {
+      callback(null, null)
+    })
+  }))
 
-exports.tearDown = function (done) {
-    injectmock.restoreAll();
-    done();
-};
+  after(() => co(function * () {
+    injectmock.restoreAll()
+  }))
 
+  it('Do tag git.', () => co(function * () {
+    yield taggit({})
+  }))
+})
 
-exports['Do tag git.'] = function (test) {
-    taggit({}, function (err) {
-        test.ifError(err);
-        test.done();
-    });
-};
+/* global describe, before, after, it */

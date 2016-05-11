@@ -4,12 +4,14 @@
  * @version {{pkg.version}}
  */
 
-"use strict";
+'use strict'
 
-const taggit = require('./taggit.js'),
-    pkg = require('../package.json');
+const taggit = require('./taggit.js')
+const pkg = require('../package.json')
 
-let lib = taggit.bind(taggit);
-lib.taggit = taggit;
-lib.version = pkg.version;
-module.exports = lib;
+let lib = taggit.bind(taggit)
+Object.assign(lib, taggit, {
+  taggit,
+  version: pkg.version
+})
+module.exports = lib
