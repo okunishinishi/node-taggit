@@ -1,13 +1,14 @@
 {
   "name": "taggit",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Create a tag on remote git with version number in package.json (or bower.json)",
   "main": "lib",
   "bin": {
     "taggit": "bin/taggit"
   },
   "scripts": {
-    "test": "./ci/test.js"
+    "test": "./ci/test.js",
+    "prepublish": "./ci/build.js"
   },
   "repository": "okunishinishi/node-taggit",
   "keywords": [
