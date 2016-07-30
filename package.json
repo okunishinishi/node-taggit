@@ -27,22 +27,20 @@
   },
   "homepage": "https://github.com/okunishinishi/node-taggit#readme",
   "dependencies": {
-    "argx": "^2.0.2",
-    "async": "^1.5.2",
+    "argx": "^3.0.0",
+    "async": "^2.0.1",
     "co": "^4.6.0",
     "commander": "^2.9.0",
-    "execcli": "^4.0.6"
+    "execcli": "^4.0.8"
   },
   "devDependencies": {
-    "ape-covering": "^3.0.3",
-    "ape-doc": "^2.0.3",
-    "ape-releasing": "^4.0.1",
+    "ape-doc": "^2.0.4",
+    "ape-releasing": "^4.0.4",
     "ape-reporting": "^3.0.1",
-    "ape-tasking": "^4.0.3",
-    "ape-testing": "^4.0.0",
-    "ape-tmpl": "^5.0.11",
-    "ape-updating": "^4.0.2",
-    "coz": "^6.0.3",
+    "ape-tasking": "^4.0.8",
+    "ape-tmpl": "^5.0.15",
+    "ape-updating": "^4.0.5",
+    "coz": "^6.0.15",
     "injectmock": "^2.0.0"
   },
   "engines": {
