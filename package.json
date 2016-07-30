@@ -1,6 +1,6 @@
 {
   "name": "taggit",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Create a tag on remote git with version number in package.json (or bower.json)",
   "main": "lib",
   "bin": {
@@ -34,6 +34,7 @@
     "execcli": "^4.0.8"
   },
   "devDependencies": {
+    "amocha": "^1.0.10",
     "ape-doc": "^2.0.4",
     "ape-releasing": "^4.0.4",
     "ape-reporting": "^3.0.1",
