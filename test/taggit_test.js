@@ -12,37 +12,37 @@ const assert = require('assert')
 const childProcess = require('child_process')
 
 describe('taggit', function () {
-  before(() => co(function * () {
-    injectmock(childProcess, 'spawn', function mockSpawn () {
+  before(async () => {
+    injectmock(childProcess, 'spawn', function mockSpawn() {
       return {
         stdout: {
-          pipe () {
+          pipe() {
           }
         },
         stderr: {
-          pipe () {
+          pipe() {
 
           }
         },
-        on (event, callback) {
+        on(event, callback) {
           setTimeout(function () {
             callback(0)
           }, 2)
         }
       }
     })
-    injectmock(childProcess, 'exec', function mockExec (comand, callback) {
+    injectmock(childProcess, 'exec', function mockExec(comand, callback) {
       callback(null, null)
     })
-  }))
+  })
 
-  after(() => co(function * () {
+  after(async () => {
     injectmock.restoreAll()
-  }))
+  })
 
-  it('Do tag git.', () => co(function * () {
-    yield taggit({})
-  }))
+  it('Do tag git.', async () => {
+    await taggit({})
+  })
 })
 
 /* global describe, before, after, it */

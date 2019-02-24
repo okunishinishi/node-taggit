@@ -1,13 +1,11 @@
 language: node_js
 node_js:
-- '6'
+- '8'
 install:
 - npm install
 script:
 - ./ci/build.js
 - ./ci/test.js
-- ./ci/cover.js
-- ./ci/report.js
 env:
   global:
     secure: yh/lcMinciYULBGGAnwPWv4wINSJHMOnDf1+PyKrH8IOyTknxc9/uHgyS8nVSHRTopfQ06qKCYn+lMxGBzEh1smvUuZD9gvx1xO9BmelzbmbCfnCLr/ttMKo0yFHM0W76dRU4DQid8v6t57LZ2QUEq3kZodq70crHGbRQPEdn28G/ZqBaxSmmNjB7iosN7GacxqpTzEqc7AY7njU9EpsVe65+EOOF7wFeaQ75srcPw2sRBEF+xABpON1My4K3rzWd7AVx4CA67JwgAuU/NZGgxZH9cvwEI08rzsXX7WgRkMDbGzuJYCuL8tsJwz1LDIbRF7CvHeOUH/7q6Drsj+osOO9mNFSbNaOspV2kCRQJmAw3RvRZ+taoEfbl8bw8KFe2t7wBxBnguCauk6sPWVeW9IWu9sLAPv+zpChJpOb5WoIyqT1kaLzxgib1/4dqxXX+mq4X3Esorkw9r+uSKHl7VfUB9+Cn5+ZjS8CP96rdgDVgpY9mCCxfvgBH5LkYnPYfo0gnFyAdMq2bgiXvBIUHqFJWfKT/eI8MMMDlfRl507Em04/FjKL0m5CHLRdZrWZqGvLZe7gbpKoXW6w3n0EpCBIceliHu/tXV06MOqAGAZqcRPVaKYgM3AcQ2BGe9QmvI6FDU00adLF+T1KdGkdN+vR0WdkUoXrkYKpxENkWek=
